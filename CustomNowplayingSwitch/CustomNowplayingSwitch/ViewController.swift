@@ -36,6 +36,7 @@ class ViewController: UIViewController {
 
     func initView(){
         view.backgroundColor = .white
+        
         customSwitch.delegate = self
     }
     
@@ -46,21 +47,18 @@ class ViewController: UIViewController {
         customSwitch.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 5).isActive = true
         customSwitch.widthAnchor.constraint(equalToConstant: 36).isActive = true
         customSwitch.heightAnchor.constraint(equalToConstant: 20).isActive = true
-    
-        
     }
 
 }
 
 extension ViewController : CustomSwitchDelegate{
-    func customSwitch(TouchUpChangeOnOffStatus status: Bool) {
+    func customSwitch(touchUpChangeOnOffStatus status: Bool) {
         print(status)
     }
     
 }
 
-
-
+//Using to change hex code to rgb
 extension UIColor {
    convenience init(red: Int, green: Int, blue: Int) {
        assert(red >= 0 && red <= 255, "Invalid red component")

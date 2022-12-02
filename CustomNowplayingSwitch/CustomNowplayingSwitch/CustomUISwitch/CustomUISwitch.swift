@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CustomSwitchDelegate : NSObject{
-    func customSwitch(TouchUpChangeOnOffStatus status: Bool)
+    func customSwitch(touchUpChangeOnOffStatus status: Bool)
 }
 
 public class CustomSwitch: UIControl {
@@ -304,7 +304,7 @@ extension CustomSwitch {
             }
             
             setUpOnOffGradient()
-            
+        
             setUpOnOffImage()
         }
     }
@@ -392,6 +392,6 @@ extension CustomSwitch {
 //MARK: Delegate method
 extension CustomSwitch {
     @objc func didTouchUpInside(){
-        self.delegate?.customSwitch(TouchUpChangeOnOffStatus: self.isOn)
+        self.delegate?.customSwitch(touchUpChangeOnOffStatus: self.isOn)
     }
 }
