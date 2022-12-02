@@ -204,7 +204,7 @@ extension CustomSwitch {
         self.thumbView.backgroundColor = self.isOn ? self.onThumbColor : self.offThumbColor
         self.thumbView.isUserInteractionEnabled = false
         self.thumbView.layer.shadowColor = UIColor.black.cgColor
-        self.thumbView.layer.shadowRadius = 1.5
+        self.thumbView.layer.shadowRadius = 8
         self.thumbView.layer.shadowOpacity = 0.15
         self.thumbView.layer.shadowOffset = CGSize(width: 0, height: 3)
         
